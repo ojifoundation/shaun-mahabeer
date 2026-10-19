@@ -1,85 +1,356 @@
-/* --- Global Resets & Typography --- */
+/* ==========================================================
+   Shaun Mahabeer: Newspaper V2 Style
+   ========================================================== */
+
 :root {
-    --bg-color: #fdfdfd;
-    --text-color: #222222;
-    --heading-color: #111111;
-    --accent-color: #0066cc;
+    --paper: #ffffff;
+    --ink: #000000;
+    --ink-soft: #555555;
+    --rule-light: #d4d4d4;
+    --link: #0057b8;
+    --link-hover: #003d85;
+
+    --font-head: "EB Garamond", Garamond, "Times New Roman", serif;
+    --font-body: Consolas, "SF Mono", Menlo, Monaco, "Liberation Mono", "Courier New", monospace;
 }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: Consolas, Monaco, monospace;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
     font-size: 15px;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
-/* --- Single-Column Mobile-First Layout --- */
-.container {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
+img { display: block; max-width: 100%; height: auto; }
+
+p { margin: 0 0 1rem; }
+
+a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+a:hover { color: var(--link-hover); }
+
+:focus-visible {
+    outline: 3px solid var(--link);
+    outline-offset: 2px;
 }
 
-/* --- Typography: EB Garamond for Headings --- */
 h1, h2, h3, h4 {
-    font-family: "EB Garamond", serif;
-    color: var(--heading-color);
+    font-family: var(--font-head);
+    color: var(--ink);
     font-weight: 600;
-    margin-top: 0;
+    margin: 0;
+    text-align: center;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.25rem;
+.page {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 1rem 1rem 3rem;
 }
 
-h2 {
-    font-size: 1.75rem;
-    margin-top: 2.5rem;
-    border-bottom: 1px solid #eaeaea;
-    padding-bottom: 0.3rem;
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--paper);
+    padding: 0.75rem 1rem;
+    z-index: 10;
 }
+.skip-link:focus { left: 0; }
 
-.subtitle {
-    font-size: 1.1rem;
-    color: #666666;
+/* --- Masthead --- */
+.masthead {
+    text-align: center;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.75rem;
     margin-bottom: 2rem;
-    font-family: Consolas, Monaco, monospace;
 }
 
-/* --- Content Elements --- */
-p {
-    margin-bottom: 1.25rem;
-}
-
-ul {
-    padding-left: 1.25rem;
-    margin-bottom: 1.25rem;
-}
-
-li {
+.site-title {
+    font-size: clamp(2rem, 8vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
     margin-bottom: 0.5rem;
 }
 
-a {
-    color: var(--accent-color);
+.masthead-contact {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+}
+.section-nav a {
+    text-decoration: none;
+    color: var(--link);
+}
+.section-nav a:hover { text-decoration: underline; }
+
+/* --- Lead Story --- */
+.headline-lead {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+}
+
+.lead-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cover img {
+    width: 100%;
+    max-width: 18rem;
+    margin: 0 auto;
+    border: 1px solid var(--ink);
+}
+
+.book-title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.order-box {
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.formats { list-style: none; padding: 0; margin: 0; }
+.formats li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--rule-light);
+}
+.formats li:last-child { border-bottom: none; }
+.format-name { font-weight: 700; display: block; }
+.format-price { font-size: 0.8rem; color: var(--ink-soft); display: block; }
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.8rem;
+    background: var(--paper);
+    color: var(--link);
+    border: 1px solid var(--link);
+    font-weight: 700;
+    font-size: 0.8rem;
     text-decoration: none;
 }
+.btn:hover { background: var(--link); color: #fff; }
+.btn-primary { background: var(--paper); color: var(--link); }
 
-a:hover {
-    text-decoration: underline;
+.lede { font-size: 0.95rem; margin-top: 1rem; }
+
+/* --- Best Sellers Grid --- */
+.section-heading-centered, .headline-centered {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 3rem 0 1.5rem;
+    border-top: 2px solid var(--ink);
+    padding-top: 1.5rem;
 }
 
-/* --- Mobile Responsiveness Adjustments --- */
-@media (max-width: 480px) {
-    .container {
-        padding: 2rem 1rem;
+.stories-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 48rem) {
+    .stories-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
     }
-    
-    h1 {
-        font-size: 2rem;
-    }
+}
+
+.story-card {
+    text-align: center;
+}
+.story-img {
+    width: 100%;
+    max-width: 13rem;
+    margin: 0 auto 0.75rem;
+    border: 1px solid var(--ink);
+}
+.story-card .book-title {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+.book-price {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.5rem;
+}
+.story-btn-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: center;
+}
+.btn-link {
+    font-size: 0.85rem;
+    color: var(--link);
+}
+
+/* --- Art Section --- */
+.art-display img {
+    max-width: 24rem;
+    margin: 0 auto 1rem;
+    border: 1px solid var(--ink);
+}
+.art-sub { text-align: center; font-size: 0.9rem; color: var(--ink-soft); }
+
+/* --- Socials List --- */
+.social-list-centered {
+    text-align: center;
+}
+.sub-label {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 1.25rem 0 0.25rem;
+}
+
+/* --- Podcast & Support --- */
+.podcast-banner img {
+    max-width: 20rem;
+    margin: 0 auto 1rem;
+    border: 1px solid var(--ink);
+}
+.podcast-desc {
+    font-size: 0.9rem;
+    text-align: justify;
+    max-width: 38rem;
+    margin: 0 auto 1rem;
+}
+
+.support-subtitle {
+    text-align: center;
+    font-family: var(--font-head);
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.eft-box {
+    border: 1px solid var(--ink);
+    padding: 1.25rem;
+    max-width: 28rem;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    text-align: left;
+}
+.eft-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+}
+
+/* --- Offers Section --- */
+.offers-section {
+    border-top: 2px solid var(--ink);
+    margin-top: 3rem;
+    padding-top: 1rem;
+}
+.offer-block {
+    text-align: center;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+.offer-title {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+.offer-desc {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.5rem;
+}
+.offer-code {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 1.1rem;
+    margin: 0.25rem 0;
+}
+.location-stamp {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule-light);
+}
+
+/* --- Signup Form --- */
+.signup-section {
+    border-top: 2px solid var(--ink);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+.signup-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 22rem;
+    margin: 0 auto;
+}
+.signup-form input {
+    padding: 0.6rem;
+    border: 1px solid var(--ink);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+}
+.btn-signup {
+    padding: 0.6rem;
+    background: var(--paper);
+    color: var(--link);
+    border: 1px solid var(--link);
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn-signup:hover { background: var(--link); color: #fff; }
+
+/* --- Colophon --- */
+.colophon {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--ink);
+    text-align: center;
+    font-size: 0.8rem;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
