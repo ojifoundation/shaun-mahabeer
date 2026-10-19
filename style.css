@@ -70,7 +70,7 @@ h1, h2, h3, h4 {
 /* --- Masthead --- */
 .masthead {
     text-align: center;
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
     padding-bottom: 0.75rem;
     margin-bottom: 2rem;
 }
@@ -82,9 +82,13 @@ h1, h2, h3, h4 {
     margin-bottom: 0.5rem;
 }
 
+.masthead-contact-wrap {
+    margin-top: 0.5rem;
+}
+
 .masthead-contact {
     font-size: 0.85rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .section-nav {
@@ -96,6 +100,7 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid var(--ink);
     padding: 0.4rem 0;
     font-size: 0.85rem;
+    margin-top: 0.75rem;
 }
 .section-nav a {
     text-decoration: none;
@@ -170,7 +175,7 @@ h1, h2, h3, h4 {
 .section-heading-centered, .headline-centered {
     font-size: clamp(1.5rem, 4vw, 2rem);
     margin: 3rem 0 1.5rem;
-    border-top: 2px solid var(--ink);
+    border-top: 1px solid var(--ink);
     padding-top: 1.5rem;
 }
 
@@ -273,7 +278,7 @@ h1, h2, h3, h4 {
 
 /* --- Offers Section --- */
 .offers-section {
-    border-top: 2px solid var(--ink);
+    border-top: 1px solid var(--ink);
     margin-top: 3rem;
     padding-top: 1rem;
 }
@@ -309,7 +314,7 @@ h1, h2, h3, h4 {
 
 /* --- Signup Form --- */
 .signup-section {
-    border-top: 2px solid var(--ink);
+    border-top: 1px solid var(--ink);
     margin-top: 3rem;
     padding-top: 2rem;
     text-align: center;
@@ -335,7 +340,7 @@ h1, h2, h3, h4 {
     padding: 0.6rem;
     background: var(--paper);
     color: var(--link);
-    border: 1px solid var(--link);
+    border: 1px solid var(--ink);
     font-weight: 700;
     cursor: pointer;
 }
@@ -345,7 +350,7 @@ h1, h2, h3, h4 {
 .colophon {
     margin-top: 3rem;
     padding-top: 1rem;
-    border-top: 2px solid var(--ink);
+    border-top: 1px solid var(--ink);
     text-align: center;
     font-size: 0.8rem;
 }
@@ -353,4 +358,14 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+}
+
+/* --- Helper Classes & Dividers --- */
+.section-divider-thin {
+    border-top: 1px solid var(--ink);
+    margin: 1.5rem 0;
+}
+
+.centered-text {
+    text-align: center;
 }
