@@ -1,0 +1,85 @@
+/* --- Global Resets & Typography --- */
+:root {
+    --bg-color: #fdfdfd;
+    --text-color: #222222;
+    --heading-color: #111111;
+    --accent-color: #0066cc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Consolas, Monaco, monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Single-Column Mobile-First Layout --- */
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+/* --- Typography: EB Garamond for Headings --- */
+h1, h2, h3, h4 {
+    font-family: "EB Garamond", serif;
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 0.3rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 2rem;
+    font-family: Consolas, Monaco, monospace;
+}
+
+/* --- Content Elements --- */
+p {
+    margin-bottom: 1.25rem;
+}
+
+ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Mobile Responsiveness Adjustments --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
