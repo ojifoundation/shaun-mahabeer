@@ -3,56 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Solo In Joburg by Shaun Mahabeer | A Memoir of Building a New Life in Johannesburg</title>
+    <title>Solo In Joburg by Shaun Mahabeer | Johannesburg Memoir</title>
     <meta name="description" content="Solo In Joburg is Shaun Mahabeer's memoir of building a new life alone in Johannesburg's CBD over 14 months. Available in paperback, Kindle and PDF.">
     <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Shaun Mahabeer">
     <link rel="canonical" href="https://shaunmahabeer.com/">
 
     <!-- Link previews -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shaun Mahabeer">
+    <meta property="og:locale" content="en_ZA">
     <meta property="og:url" content="https://shaunmahabeer.com/">
-    <meta property="og:title" content="Solo In Joburg by Shaun Mahabeer | A Memoir of Building a New Life in Johannesburg">
+    <meta property="og:title" content="Solo In Joburg by Shaun Mahabeer | Johannesburg Memoir">
     <meta property="og:description" content="Fourteen months alone in Johannesburg's CBD: finding a home, managing money, dating and living through an eight-month water outage.">
     <meta property="og:image" content="https://shaunmahabeer.com/solo-in-joburg-book-by-shaun-mahabeer.webp">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image:alt" content="Cover of Solo In Joburg by Shaun Mahabeer">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Solo In Joburg by Shaun Mahabeer | Johannesburg Memoir">
+    <meta name="twitter:description" content="Fourteen months alone in Johannesburg's CBD: finding a home, managing money, dating and living through an eight-month water outage.">
+    <meta name="twitter:image" content="https://shaunmahabeer.com/solo-in-joburg-book-by-shaun-mahabeer.webp">
 
-    <!-- Search: Book structured data -->
+    <!-- Search: structured data (WebSite, Person, Book) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Book",
-        "name": "Solo In Joburg: How I Built a New Life in 14 Months — Alone — in The Joburg CBD",
-        "author": { "@type": "Person", "name": "Shaun Mahabeer", "url": "https://shaunmahabeer.com" },
-        "numberOfPages": 236,
-        "inLanguage": "en",
-        "image": "https://shaunmahabeer.com/solo-in-joburg-book-by-shaun-mahabeer.webp",
-        "workExample": [
+        "@graph": [
             {
-                "@type": "Book",
-                "bookFormat": "https://schema.org/Paperback",
-                "url": "https://www.amazon.com/Solo-Joburg-Shaun-Mahabeer/dp/B0HLXY3475",
-                "offers": { "@type": "Offer", "price": "19.99", "priceCurrency": "USD" }
+                "@type": "WebSite",
+                "@id": "https://shaunmahabeer.com/#website",
+                "url": "https://shaunmahabeer.com/",
+                "name": "Shaun Mahabeer",
+                "inLanguage": "en-ZA",
+                "publisher": { "@id": "https://shaunmahabeer.com/#shaun" }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://shaunmahabeer.com/#shaun",
+                "name": "Shaun Mahabeer",
+                "url": "https://shaunmahabeer.com/",
+                "email": "mailto:shaunmahabeer@outlook.com",
+                "jobTitle": "Author, artist and podcaster",
+                "description": "Shaun Mahabeer is a writer, artist, podcaster and solo traveler based in Johannesburg, South Africa.",
+                "address": { "@type": "PostalAddress", "addressLocality": "Johannesburg", "addressCountry": "ZA" },
+                "sameAs": [
+                    "https://www.amazon.com/author/shaunmahabeer",
+                    "https://www.instagram.com/shaun.mahabeer",
+                    "https://x.com/shaun_mahabeer",
+                    "https://www.tiktok.com/@shaun.mahabeer",
+                    "https://www.youtube.com/@shaun.mahabeer",
+                    "https://www.youtube.com/@deeptopicspodcast",
+                    "https://www.twitch.tv/shaunmahabeer",
+                    "https://www.facebook.com/shaun.eatss/"
+                ]
             },
             {
                 "@type": "Book",
-                "bookFormat": "https://schema.org/EBook",
-                "url": "https://www.amazon.com/Solo-Joburg-Shaun-Mahabeer-ebook/dp/B0HLY3PCVW",
-                "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "Book",
-                "bookFormat": "https://schema.org/EBook",
-                "url": "https://paystack.com/buy/solo-in-joburg",
-                "offers": { "@type": "Offer", "price": "250", "priceCurrency": "ZAR" }
+                "@id": "https://shaunmahabeer.com/#solo-in-joburg",
+                "name": "Solo In Joburg: How I Built a New Life in 14 Months \u2014 Alone \u2014 in The Joburg CBD",
+                "description": "A memoir of fourteen months alone in Johannesburg's CBD: finding a home, managing money, dating and living through an eight-month water outage.",
+                "author": { "@id": "https://shaunmahabeer.com/#shaun" },
+                "numberOfPages": 236,
+                "inLanguage": "en",
+                "url": "https://shaunmahabeer.com/",
+                "image": "https://shaunmahabeer.com/solo-in-joburg-book-by-shaun-mahabeer.webp",
+                "workExample": [
+                    {
+                        "@type": "Book",
+                        "bookFormat": "https://schema.org/Paperback",
+                        "url": "https://www.amazon.com/Solo-Joburg-Shaun-Mahabeer/dp/B0HLXY3475",
+                        "offers": { "@type": "Offer", "price": "19.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/Solo-Joburg-Shaun-Mahabeer/dp/B0HLXY3475" }
+                    },
+                    {
+                        "@type": "Book",
+                        "bookFormat": "https://schema.org/EBook",
+                        "url": "https://www.amazon.com/Solo-Joburg-Shaun-Mahabeer-ebook/dp/B0HLY3PCVW",
+                        "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/Solo-Joburg-Shaun-Mahabeer-ebook/dp/B0HLY3PCVW" }
+                    },
+                    {
+                        "@type": "Book",
+                        "bookFormat": "https://schema.org/EBook",
+                        "url": "https://paystack.com/buy/solo-in-joburg",
+                        "offers": { "@type": "Offer", "price": "250", "priceCurrency": "ZAR", "availability": "https://schema.org/InStock", "url": "https://paystack.com/buy/solo-in-joburg" }
+                    }
+                ]
             }
         ]
     }
     </script>
 
-    <!-- Garamond for headings -->
+    <!-- Hero image: fetched first (it is the only image above the fold) -->
+    <link rel="preload" as="image" href="solo-in-joburg-book-by-shaun-mahabeer.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Garamond for headings: only the weights/styles the page uses, loaded without blocking first paint -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap"></noscript>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -89,7 +136,7 @@
 
                 <div class="lead-body">
                     <figure class="cover">
-                        <img src="solo-in-joburg-book-by-shaun-mahabeer.webp" alt="Cover of Solo In Joburg by Shaun Mahabeer" width="400" height="600">
+                        <img src="solo-in-joburg-book-by-shaun-mahabeer.webp" alt="Solo In Joburg by Shaun Mahabeer: book cover of a memoir about building a new life in Johannesburg" width="400" height="600" fetchpriority="high" decoding="async">
                     </figure>
 
                     <div class="lead-text">
@@ -207,7 +254,7 @@
             <!-- ABOUT SHAUN -->
             <section id="about" class="about-section" aria-labelledby="about-heading">
                 <h2 id="about-heading" class="headline-centered">About Shaun Mahabeer</h2>
-                <!-- TODO: Add a portrait, e.g. <img class="about-photo" src="shaun-mahabeer-south-african-author-and-media-personality.webp" alt="Shaun Mahabeer is a South African author and media personality." width="300" height="300" loading="lazy"> -->
+                <!-- TODO: Add a portrait, e.g. <img class="about-photo" src="shaun-mahabeer-south-african-author-and-media-personality.webp" alt="Shaun Mahabeer is a South African author and media personality." width="300" height="300" loading="lazy" decoding="async"> -->
                 <p class="body-text">Shaun Mahabeer is a writer, artist, podcaster and solo traveler based in Johannesburg, South Africa. He writes about independence, risk, peace and everyday life, draws on location during his travels, and shares his journey across books, a podcast and social media.</p>
                 <p class="body-text">He is the author of Solo In Joburg, Solo Journeys, Shaun Eats and Peace and How To Have It.</p>
                 <!-- TODO: Add 1–2 personal details or credentials (years writing, places lived or travelled, press features). -->
@@ -219,7 +266,7 @@
 
                 <div class="stories-grid-3">
                     <article class="story-card" aria-labelledby="story-journeys">
-                        <img src="solo-journeys-book-by-shaun-mahabeer.webp" alt="Solo Journeys book by Shaun Mahabeer" width="400" height="600" loading="lazy" class="story-img">
+                        <img src="solo-journeys-book-by-shaun-mahabeer.webp" alt="Solo Journeys by Shaun Mahabeer: book cover of a guide to taking more risk and going on adventures" width="400" height="600" loading="lazy" decoding="async" class="story-img">
                         <h3 id="story-journeys" class="book-title">Solo Journeys:<br>A Guide to Taking More Risk, Going on Adventures, and Exploring What Life Has to Offer</h3>
                         <p>Essential reading for Free Spirits.</p>
                         <p class="book-price">R100 ZAR</p>
@@ -229,7 +276,7 @@
                     </article>
 
                     <article class="story-card" aria-labelledby="story-eats">
-                        <img src="shaun-eats-26-vegetarian-recipes-from-my-joburg-kitchen-recipe-book.webp" alt="Shaun Eats: 26 Vegetarian Recipes From My Joburg Kitchen book." width="400" height="600" loading="lazy" class="story-img">
+                        <img src="shaun-eats-26-vegetarian-recipes-from-my-joburg-kitchen-recipe-book.webp" alt="Shaun Eats by Shaun Mahabeer: recipe book cover with 26 vegetarian recipes from a Joburg kitchen" width="400" height="600" loading="lazy" decoding="async" class="story-img">
                         <h3 id="story-eats" class="book-title">Shaun Eats:<br>26 Vegetarian Recipes From My Joburg Kitchen</h3>
                         <p>Hearty, wholesome, and nourishing meals from Shaun’s Joburg season.</p>
                         <p class="book-price">R125 ZAR</p>
@@ -239,7 +286,7 @@
                     </article>
 
                     <article class="story-card" aria-labelledby="story-peace">
-                        <img src="peace-and-how-to-have-it-book-by-shaun-mahabeer.webp" alt="Peace and How To Have It bookby Shaun Mahabeer" width="400" height="600" loading="lazy" class="story-img">
+                        <img src="peace-and-how-to-have-it-book-by-shaun-mahabeer.webp" alt="Peace and How To Have It by Shaun Mahabeer: book cover of a practical guide to daily inner peace" width="400" height="600" loading="lazy" decoding="async" class="story-img">
                         <h3 id="story-peace" class="book-title">Peace and How To Have It</h3>
                         <p>A practical guide to daily inner peace.</p>
                         <p class="book-price">R100 ZAR</p>
@@ -263,7 +310,7 @@
             <section id="art" class="art-section" aria-labelledby="art-heading">
                 <h2 id="art-heading" class="headline-centered">Own a piece of Shaun’s journey.<br>Get original drawings from Shaun’s travels.</h2>
                 <div class="art-display">
-                    <img src="table-mountain-drawing-by-shaun-mahabeer.webp" alt="Original ink drawing of Table Mountain by Shaun Mahabeer" width="600" height="400" loading="lazy">
+                    <img src="table-mountain-drawing-by-shaun-mahabeer.webp" alt="Original ink drawing of Table Mountain in Cape Town, drawn on location by Shaun Mahabeer" width="600" height="400" loading="lazy" decoding="async">
                 </div>
                 <p class="art-sub">Original drawings,<br>drawn on location during Shaun’s travels.</p>
                 <p class="center-links"><a class="btn-link" href="https://paystack.shop/art-of-shaun">Explore the Art Collection</a></p>
@@ -300,7 +347,7 @@
             <section id="podcast" aria-labelledby="podcast-heading">
                 <h2 id="podcast-heading" class="headline-centered">Gain insights and reflections from Shaun’s life.<br>Listen to Shaun’s Podcast on YouTube.</h2>
                 <div class="podcast-banner">
-                    <img src="deep-topics-podcast-with-shaun.webp" alt="Shaun Mahabeer is the host of the Deep Topics with Shaun podcast" width="500" height="300" loading="lazy">
+                    <img src="deep-topics-podcast-with-shaun.webp" alt="Shaun Mahabeer, host of the Deep Topics with Shaun podcast on YouTube and Spotify" width="500" height="300" loading="lazy" decoding="async">
                 </div>
                 <p class="podcast-desc">Deep Topics with Shaun is Shaun’s podcast for personal reflections and conversations about navigating modern life amidst uncertainty. He explores themes including resilience, self-discovery, and clarity, sharing perspectives and experiences that invite a closer look at the questions shaping how we live.</p>
 
