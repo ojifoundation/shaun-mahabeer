@@ -463,7 +463,7 @@ h1, h2, h3, h4 {
 .podcast-banner img {
     aspect-ratio: 1 / 1;
     width: 100%;
-    max-width: 20rem;
+    max-width: 14rem;
     margin: 0 auto 1rem;
     border: 1px solid var(--ink);
 }
