@@ -461,7 +461,7 @@ h1, h2, h3, h4 {
 
 /* --- Podcast --- */
 .podcast-banner img {
-    aspect-ratio: 5 / 3;
+    aspect-ratio: 1 / 1;
     width: 100%;
     max-width: 20rem;
     margin: 0 auto 1rem;
