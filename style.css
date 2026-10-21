@@ -629,8 +629,14 @@ h1, h2, h3, h4 {
     line-height: 1.5;
 }
 
-/* MailerLite success message */
-#newsletter .ml-form-embedWrapper .row-success,
-#newsletter .ml-form-embedWrapper .row-success * {
+/* MailerLite success message: preserve Garamond heading */
+#newsletter .ml-form-embedWrapper .row-success h4 {
+    font-family: var(--font-head) !important;
+}
+
+/* MailerLite success message: Consolas body text */
+#newsletter .ml-form-embedWrapper .row-success p,
+#newsletter .ml-form-embedWrapper .row-success p * {
     font-family: var(--font-body) !important;
 }
+
