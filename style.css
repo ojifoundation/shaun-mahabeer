@@ -320,23 +320,6 @@ h1, h2, h3, h4 {
     color: var(--ink-soft);
 }
 
-/* --- MailerLite newsletter form typography --- */
-#newsletter .ml-form-embedWrapper input,
-#newsletter .ml-form-embedWrapper button {
-    font-family: var(--font-body) !important;
-}
-
-/* Center the placeholder text in both input fields */
-#newsletter .ml-form-embedWrapper input::placeholder {
-    text-align: center;
-    opacity: 1;
-}
-
-/* Center the button label */
-#newsletter .ml-form-embedWrapper button {
-    text-align: center;
-}
-
 /* --- Readers' letters --- */
 .letters {
     display: grid;
@@ -600,4 +583,37 @@ h1, h2, h3, h4 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* --- MailerLite newsletter form styling --- */
+
+/* Input text and placeholder text */
+#newsletter .ml-form-embedWrapper input,
+#newsletter .ml-form-embedWrapper input::placeholder {
+    font-family: Consolas, "SF Mono", Menlo, Monaco,
+        "Liberation Mono", "Courier New", monospace !important;
+}
+
+#newsletter .ml-form-embedWrapper input::placeholder {
+    text-align: center !important;
+    opacity: 1;
+}
+
+/* Subscribe button: force Consolas and center the label */
+#newsletter .ml-form-embedWrapper button,
+#newsletter .ml-form-embedWrapper button *,
+#newsletter .ml-form-embedWrapper input[type="submit"],
+#newsletter .ml-form-embedWrapper input[type="button"] {
+    font-family: Consolas, "SF Mono", Menlo, Monaco,
+        "Liberation Mono", "Courier New", monospace !important;
+    text-align: center !important;
+}
+
+/* Privacy text and Privacy Policy link */
+#newsletter .ml-form-embedPermissionsContent {
+    text-align: center !important;
+    font-family: Consolas, "SF Mono", Menlo, Monaco,
+        "Liberation Mono", "Courier New", monospace !important;
+    font-size: 0.75rem !important;
+    line-height: 1.5;
 }
