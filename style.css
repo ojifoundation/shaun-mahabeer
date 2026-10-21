@@ -295,6 +295,17 @@ h1, h2, h3, h4 {
     margin-top: 3rem;
 }
 .signup-section .headline-centered { margin-top: 0; }
+
+/* Let the two long headlines fill the line instead of balancing */
+.headline-lead,
+.signup-section .headline-centered {
+    text-wrap: pretty;
+
+}
+.headline-lead {
+    font-size: clamp(1.75rem, 6vw, 2.4rem);
+}
+
 .signup-desc {
     font-size: 0.9rem;
     margin-bottom: 1rem;
